@@ -5,9 +5,29 @@
     align-items: center
     justify-content: space-between
     padding: 40px 0
+    &__button-menu
+      display: none
   &__search
     margin-right: auto
     margin-left: 108px
+  &-bottom
+    background-color: $dark
+  &-menu
+    list-style-type: none
+    padding: 31px 0
+    margin: 0
+    display: flex
+    align-items: center
+    justify-content: space-between
+    &__link
+      color: $text-color
+      text-transform: uppercase
+      font-weight: bold
+      font-size: 14px
+      line-height: 18px
+      color: $light
+.logo
+  width: 177px
 .search
   display: flex
   position: relative
@@ -33,6 +53,9 @@
     height: 100%
     background-color: $primary-color
     border: none
+  &__image
+    width: 16px
+    height: 16px
 .user
   display: flex
   align-items: center
