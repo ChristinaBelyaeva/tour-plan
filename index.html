@@ -10,6 +10,8 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;600;700&family=Nunito:wght@400;600;800&display=swap"
     rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -126,9 +128,35 @@
         <!-- /.hotel-info__ratting -->
       </div>
       <!-- /.hotel-info -->
+      <div class="hotel-grid">
+        <div class="slider">
+          <!-- Slider main container -->
+          <div class="swiper-container">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide"><img src="img/beach.png" alt="beach" class="swiper__image"></div>
+              <div class="swiper-slide"><img src="img/beach.png" alt="beach" class="swiper__image"></div>
+              <div class="swiper-slide"><img src="img/beach.png" alt="beach" class="swiper__image"></div>
+            </div>
+          
+            <!-- If we need navigation buttons -->
+            <button class="slider-button slider-button--prev"></button>
+            <button class="slider-button slider-button--next"></button>
+          
+          </div>
+          <!-- /.swiper-container -->
+        </div>
+        <!-- /.slider -->
+      </div>
+      <!-- /.hotel-grid -->
     </div>
     <!-- /.container -->
   </section>
+  <!-- /.hotel -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 
 </html>
