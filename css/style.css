@@ -486,6 +486,32 @@ template {
   color: #333333;
 }
 
+.breadcrumb-list {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 18px 0;
+  margin: 0;
+}
+
+.breadcrumb-list__item {
+  font-size: 10px;
+  line-height: 13px;
+}
+
+.breadcrumb-list__item:not(:last-child)::after {
+  content: '/';
+  margin-right: 4px;
+}
+
+.breadcrumb-list__link {
+  color: inherit;
+}
+
 .hotel {
   padding-top: 23px;
   padding-bottom: 70px;
@@ -539,6 +565,36 @@ template {
   color: #333333;
 }
 
+.hotel-grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.hotel-grid__right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 450px;
+}
+
+.hotel-grid__map {
+  border-radius: 10px;
+}
+
 .stars {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
@@ -575,32 +631,6 @@ template {
   font-weight: bold;
   font-size: 14px;
   line-height: 18px;
-}
-
-.breadcrumb-list {
-  list-style: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 18px 0;
-  margin: 0;
-}
-
-.breadcrumb-list__item {
-  font-size: 10px;
-  line-height: 13px;
-}
-
-.breadcrumb-list__item:not(:last-child)::after {
-  content: '/';
-  margin-right: 4px;
-}
-
-.breadcrumb-list__link {
-  color: inherit;
 }
 
 .swiper-container {
@@ -652,6 +682,143 @@ template {
   background: url(../img/arrow-right.svg) no-repeat center;
   background-size: 10px;
   right: 18px;
+}
+
+.booking {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 350px;
+  padding: 28px;
+  border-radius: 8px;
+  background-color: #0A223D;
+  font-family: 'Nunito', sans-serif;
+  color: #ffffff;
+}
+
+.booking-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 9px;
+}
+
+.booking-price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.booking-price__start {
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 14px;
+}
+
+.booking-price__pricetag {
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 33px;
+}
+
+.booking-price__per-room {
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.booking-user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.booking-user:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.booking-user__text {
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.booking-button {
+  width: 100%;
+  padding: 13px 0;
+  background-color: #EC1F46;
+  border: none;
+  border-radius: 4px;
+}
+
+.booking-button__text {
+  color: #ffffff;
+}
+
+.person-room {
+  width: 80px;
+  height: 40px;
+  margin-top: 4px;
+}
+
+.call-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 17px;
+}
+
+.call-center__head {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+.call-center__phone-number {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 76px;
+}
+
+.call-center__number {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 25px;
+  color: #ffffff;
 }
 
 @media (max-width: 1200px) {

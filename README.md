@@ -8,3 +8,4 @@
 - css
 - БЭМ
 - sass
+- JavaScript
