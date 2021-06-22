@@ -28,13 +28,11 @@
     color: $text-color
   &-grid
     display: flex
-    align-items: flex-start
     justify-content: space-between
-    &__right
-      display: flex
-      flex-direction: column
-      justify-content: space-between
-      height: 450px
+  &-moving
+    display: flex
+    flex-direction: column
+    justify-content: space-between
 .stars
   flex-basis: 100%
 .offer
@@ -65,7 +63,7 @@
 .swiper
   &-container
     width: 100%
-    height: 450px
+    height: 100%
     margin: 0
     border-radius: 8px
     position: relative
@@ -82,6 +80,7 @@
       z-index: 10
 .slider
   width: 728px
+  height: 450px
   &-button
     position: absolute
     top: 50%
@@ -103,70 +102,76 @@
 .booking
   display: flex
   flex-direction: column
-  width: 350px
-  padding: 28px
-  border-radius: 8px
   background-color: $dark
-  font-family: 'Nunito', sans-serif
   color: $light
-  &-info
+  border-radius: 8px
+  width: 350px
+  min-height: 210px
+  padding: 28px
+  font-family: 'Nunito', sans-serif
+  &__info
     display: flex
     justify-content: space-between
     margin-bottom: 9px
-  &-price
+  &__price
     display: flex
     flex-direction: column
-    &__start
-      font-weight: normal
-      font-size: 10px
-      line-height: 14px
-    &__pricetag
-      font-weight: 800
-      font-size: 24px
-      line-height: 33px
-    &__per-room
-      font-weight: normal
-      font-size: 12px
-      line-height: 16px
-  &-user
+  &__start
+    font-weight: normal
+    font-size: 10px
+    line-height: 14px
+  &__pricetag
+    font-weight: 800
+    font-size: 24px
+    line-height: 33px
+  &__per-room
+    font-weight: normal
+    font-size: 12px
+    line-height: 16px
+  &__room
+    margin-top: 4px
+  &__text
     display: flex
     align-items: center
     justify-content: space-between
+    font-weight: normal
+    font-size: 12px
+    line-height: 16px
     &:not(:last-child)
       margin-bottom: 8px
-    &__text
-      font-weight: normal
-      font-size: 12px
-      line-height: 16px
-  &-button
-    width: 100%
-    padding: 13px 0
-    background-color: $primary-color
-    border: none
-    border-radius: 4px
-    &__text
-      color: $light
-.person-room
-  width: 80px
-  height: 40px
-  margin-top: 4px
-.call-center
-  display: flex
-  flex-direction: row
-  align-items: center
-  justify-content: space-between
-  padding-bottom: 17px
-  &__head
-    font-weight: 600
-    font-size: 18px
-    line-height: 25px
-  &__phone-number
+  &__description
+    margin-left: 9px
+  &__call-center
     display: flex
     align-items: center
     justify-content: space-between
-    width: 76px
-  &__number
+    margin-bottom: 17px
+  &__heading
     font-weight: 600
     font-size: 18px
     line-height: 25px
+  &__number
+    display: flex
+    align-items: center
+    justify-content: space-between
+    font-weight: 600
+    font-size: 18px
+    line-height: 25px
+    color: inherit
+  &__num
+    margin-left: 8px
+  &__button
+    width: 100%
+    min-height: 45px
+    font-weight: 600
+    font-size: 14px
+    line-height: 19px
+    border-radius: 4px
+    background-color: $primary-color
+    border: none
     color: $light
+    cursor: pointer
+.map
+  width: 347px
+  height: 213px
+  overflow: hidden
