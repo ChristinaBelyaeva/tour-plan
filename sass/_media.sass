@@ -42,6 +42,24 @@
     height: 210px
   .newsletter
     padding: 92px 0 93px 0
+  .reviews
+    padding-bottom: 60px
+    &__header
+      margin-bottom: 95px
+    &__title
+      font-style: normal
+      font-weight: bold
+      font-size: 30px
+      line-height: 38px
+      max-width: 487px
+    &-slider
+      overflow: visible
+      &__item
+        max-width: 579px
+        height: 299px
+        padding: 136px 62px 30px 62px
+      &__profile
+        left: 243px
 @media (max-width: 768px)
   .container
     max-width: 576px
@@ -91,7 +109,19 @@
         line-height: 38px
     &-subscribe
       width: 100%
-
+  .reviews
+    &__title
+      font-size: 18px
+      line-height: 23px
+    &-slider
+      &__item
+        padding: 136px 31px 34px 31px
+        max-width: 95%
+        height: 100%
+      &__profile
+        left: 40%
+      &__text
+        text-align: left
 @media (max-width: 576px)
   .logo
     max-width: 99px

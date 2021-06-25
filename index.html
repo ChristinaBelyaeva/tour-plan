@@ -126,11 +126,10 @@
       <!-- /.hotel-info -->
       <div class="hotel-grid">
         <div class="slider hotel__slider">
-          <!-- Slider main container -->
           <div class="swiper-container">
-            <!-- Additional required wrapper -->
+
             <div class="swiper-wrapper">
-              <!-- Slides -->
+
               <div class="swiper-slide">
                 <img src="img/beach.png" alt="beach" class="swiper-slide__image">
               </div>
@@ -147,8 +146,8 @@
                 <img src="img/slide-5.jpg" alt="bench" class="swiper-slide__image">
               </div>
             </div>
+            <!-- /.swiper-wrapper -->
 
-            <!-- If we need navigation buttons -->
             <button class="slider-button slider-button--prev"></button>
             <button class="slider-button slider-button--next"></button>
 
@@ -228,7 +227,58 @@
     <!-- /.container -->
   </section>
   <!-- /.newsletter -->
+  <section class="reviews">
+    <div class="container">
+      <div class="reviews__header">
+        <h2 class="reviews__title">what people think about us</h2>
+      </div>
+      <!-- /.reviews__header -->
+      <div class="swiper-container reviews-slider">
 
+        <div class="swiper-wrapper reviews__swiper-wrapper">
+
+          <div class="swiper-slide">
+            <div class="reviews-slider__item">
+              <div class="reviews-slider__profile">
+                <img 
+                class="reviews-slider__avatar"
+                src="img/review-avatar.jpg" 
+                alt="avatar: Megan Fox">
+                <span class="reviews-slider__name">Megan Fox</span>
+                <span class="reviews-slider__date">Stayed 18 Nov, 2019</span>
+                <div class="stars reviews-slider__stars">
+                  <img class="reviews-slider__star" src="img/star.svg" alt="star">
+                  <img class="reviews-slider__star" src="img/star.svg" alt="star">
+                  <img class="reviews-slider__star" src="img/star.svg" alt="star">
+                  <img class="reviews-slider__star" src="img/star.svg" alt="star">
+                  <img class="reviews-slider__star" src="img/star.svg" alt="star">
+                </div>
+                <!-- /.stars -->
+              </div>
+              <!-- /.reviews-slider__profile -->
+                <p class="reviews-slider__text">
+                  It was very nice hotel with cleanliness. Staff behavior was good and polite. They welcome us very well. Issue was only
+                  that Lift was not in working and we were allotted to 3rd floor and amenities articles were in corner of gallery which
+                  were giving bad feeling. Breakfast was good and support of the staff was also very nice. Location is not good as per
+                  atmosphere, it is very nearby most of the popular places but self location in a narrow street is not good. Overall it
+                  was a good experience and could recommend.
+                </p>
+            </div>
+            <!-- /.reviews-slider__item -->
+              
+          </div>
+          <!-- /.swiper-slide -->
+        </div>
+        <!-- /. swiper-wrapper-->
+        <button class="slider-button slider-button--prev"></button>
+        <button class="slider-button slider-button--next"></button>
+
+      </div>
+      <!-- /.swiper-container -->
+    </div>
+    <!-- /.container -->
+  </section>
+  <!-- /.reviews -->
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="js/main.js"></script>
 </body>
