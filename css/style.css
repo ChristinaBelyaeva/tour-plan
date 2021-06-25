@@ -22,6 +22,10 @@ a {
   text-decoration: none;
 }
 
+button {
+  cursor: pointer;
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -817,6 +821,83 @@ template {
   overflow: hidden;
 }
 
+.newsletter {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(10, 34, 61, 0.8))), center/cover no-repeat url(../img/background.jpg);
+  background: linear-gradient(rgba(10, 34, 61, 0.8)), center/cover no-repeat url(../img/background.jpg);
+  padding: 98px 0 87px 0;
+}
+
+.newsletter-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 731px;
+  margin: auto;
+}
+
+.newsletter-text {
+  min-width: 242px;
+}
+
+.newsletter-text__discription {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 30px;
+  color: #ffffff;
+}
+
+.newsletter-text__title {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 45px;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin: 0;
+}
+
+.newsletter-subscribe {
+  height: 55px;
+  width: 350px;
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.newsletter-subscribe__input {
+  padding: 19px 75px 18px 33px;
+  height: 100%;
+  width: 100%;
+  border: none;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.newsletter-subscribe__button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0;
+  height: 100%;
+  min-width: 65px;
+  border: none;
+  background-color: #EC1F46;
+  color: #ffffff;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+}
+
 @media (max-width: 1200px) {
   .container {
     max-width: 960px;
@@ -877,6 +958,9 @@ template {
     width: 340px;
     height: 210px;
   }
+  .newsletter {
+    padding: 92px 0 93px 0;
+  }
 }
 
 @media (max-width: 768px) {
@@ -923,6 +1007,34 @@ template {
     min-height: 450px;
   }
   .booking, .map {
+    width: 100%;
+  }
+  .newsletter {
+    padding: 76px 0 83px 0;
+  }
+  .newsletter-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .newsletter-text__discription {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 25px;
+  }
+  .newsletter-text__title {
+    margin-bottom: 37px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 38px;
+  }
+  .newsletter-subscribe {
     width: 100%;
   }
 }

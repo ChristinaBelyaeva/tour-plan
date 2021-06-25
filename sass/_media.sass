@@ -40,6 +40,8 @@
   .booking, .map
     width: 340px
     height: 210px
+  .newsletter
+    padding: 92px 0 93px 0
 @media (max-width: 768px)
   .container
     max-width: 576px
@@ -70,6 +72,26 @@
       min-height: 450px
   .booking, .map
     width: 100%
+  .newsletter
+    padding: 76px 0 83px 0
+    &-wrapper
+      flex-direction: column
+      align-items: flex-start
+    &-text
+      &__discription
+        font-style: normal
+        font-weight: 300
+        font-size: 20px
+        line-height: 25px
+      &__title
+        margin-bottom: 37px
+        font-style: normal
+        font-weight: 600
+        font-size: 30px
+        line-height: 38px
+    &-subscribe
+      width: 100%
+
 @media (max-width: 576px)
   .logo
     max-width: 99px
