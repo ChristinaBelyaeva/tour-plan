@@ -1,11 +1,11 @@
 .reviews
   padding: 40px 0 70px 0
-  &__header
-    display: flex
-    justify-content: center
-    margin-bottom: 115px
+  // &__header
+  //   display: flex
+  //   justify-content: center
+  //   margin-bottom: 115px
   &__title
-    max-width: 584px
+    // max-width: 584px
     font-style: normal
     font-weight: bold
     font-size: 36px
@@ -13,26 +13,48 @@
     text-align: center
     text-transform: uppercase
     margin: 0
+    margin-bottom: 70px
   &-slider
-    overflow: visible
+    // overflow: visible
     &__item
+      display: flex
+      flex-direction: column
+      align-items: center
       width: 731px
-      height: 280px
+      // height: 280px
       position: relative
-      margin: auto
-      padding: 136px 97px 30px 97px
+      margin: 45px auto 0
+      padding: 0 62px 30px
       background-color: #fff
       border-radius: 8px
+      &::before
+        content: ''
+        position: absolute
+        top: 13px
+        left: 62px
+        width: 70px
+        height: 47px
+        background: url(../img/quote-left.svg) no-repeat
+      &::after
+        content: ''
+        position: absolute
+        top: 118px
+        right: 62px
+        width: 70px
+        height: 47px
+        background: url(../img/quote-right.svg) no-repeat
     &__profile
       display: flex
       flex-direction: column
-      justify-content: center
+      // justify-content: center
       align-items: center
-      width: 97px
-      height: 149px
-      position: absolute
-      top: -45px
-      left: 319px
+      // width: 97px
+      // height: 149px
+      // position: absolute
+      // top: -45px
+      // left: 319px
+      margin-top: -45px
+      margin-bottom: 30px
     &__avatar
       height: 90px
       width: 90px
@@ -40,26 +62,49 @@
       object-fit: cover
       margin-bottom: 9px
     &__name
+      // margin: 0
+      margin-bottom: 10px
       font-style: normal
       font-weight: bold
       font-size: 12px
       line-height: 15px
       color: $primary-color
-      margin-bottom: 10px
     &__date
       font-style: normal
       font-weight: normal
       font-size: 10px
       line-height: 13px
-      color: #000000
+      // color: #000000
       margin-bottom: 4px
     &__stars
-      line-height: 0
+      // line-height: 0
+      display: flex
+      align-items: space-between
     &__text
-      margin: 0
+      max-width: 537px
+      margin: auto
       text-align: justify
       font-style: normal
       font-weight: normal
       font-size: 12px
       line-height: 19px
-      color: $text-color
+      // color: $text-color
+    &__button
+      position: absolute
+      top: 50%
+      transform: translateY(-50%)
+      width: 30px
+      height: 30px
+      background-repeat: no-repeat
+      background-size: 10px
+      background-position: center
+      border: none
+      background-color: transparent
+      cursor: pointer
+      z-index: 99
+      &--prev
+        background-image: url(../img/arrow-prev.svg)
+        left: 0
+      &--next
+        background-image: url(../img/arrow-next.svg)
+        right: 0

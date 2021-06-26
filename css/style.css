@@ -569,6 +569,59 @@ template {
   color: #333333;
 }
 
+.hotel-slider {
+  width: 728px;
+  height: 450px;
+}
+
+.hotel-slider__item {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.hotel-slider__item::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 122, 223, 0.48)), to(rgba(255, 255, 255, 0.128)));
+  background: linear-gradient(180deg, rgba(0, 122, 223, 0.48) 0%, rgba(255, 255, 255, 0.128) 100%);
+  z-index: 10;
+}
+
+.hotel-slider__button {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  z-index: 99;
+  height: 30px;
+  width: 30px;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.hotel-slider__button--prev {
+  background: url(../img/arrow-left.svg) no-repeat center;
+  background-size: 10px;
+  left: 18px;
+}
+
+.hotel-slider__button--next {
+  background: url(../img/arrow-right.svg) no-repeat center;
+  background-size: 10px;
+  right: 18px;
+}
+
 .hotel-grid {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -627,56 +680,6 @@ template {
   font-weight: bold;
   font-size: 14px;
   line-height: 18px;
-}
-
-.swiper-container {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  border-radius: 8px;
-  position: relative;
-}
-
-.swiper-container::after {
-  content: '';
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 10;
-}
-
-.slider {
-  width: 728px;
-  height: 450px;
-}
-
-.slider-button {
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  z-index: 99;
-  height: 30px;
-  width: 30px;
-  border: none;
-  cursor: pointer;
-  background-color: transparent;
-}
-
-.slider-button--prev {
-  background: url(../img/arrow-left.svg) no-repeat center;
-  background-size: 10px;
-  left: 18px;
-}
-
-.slider-button--next {
-  background: url(../img/arrow-right.svg) no-repeat center;
-  background-size: 10px;
-  right: 18px;
 }
 
 .booking {
@@ -900,18 +903,7 @@ template {
   padding: 40px 0 70px 0;
 }
 
-.reviews__header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-bottom: 115px;
-}
-
 .reviews__title {
-  max-width: 584px;
   font-style: normal;
   font-weight: bold;
   font-size: 36px;
@@ -919,20 +911,46 @@ template {
   text-align: center;
   text-transform: uppercase;
   margin: 0;
-}
-
-.reviews-slider {
-  overflow: visible;
+  margin-bottom: 70px;
 }
 
 .reviews-slider__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 731px;
-  height: 280px;
   position: relative;
-  margin: auto;
-  padding: 136px 97px 30px 97px;
+  margin: 45px auto 0;
+  padding: 0 62px 30px;
   background-color: #fff;
   border-radius: 8px;
+}
+
+.reviews-slider__item::before {
+  content: '';
+  position: absolute;
+  top: 13px;
+  left: 62px;
+  width: 70px;
+  height: 47px;
+  background: url(../img/quote-left.svg) no-repeat;
+}
+
+.reviews-slider__item::after {
+  content: '';
+  position: absolute;
+  top: 118px;
+  right: 62px;
+  width: 70px;
+  height: 47px;
+  background: url(../img/quote-right.svg) no-repeat;
 }
 
 .reviews-slider__profile {
@@ -943,17 +961,11 @@ template {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 97px;
-  height: 149px;
-  position: absolute;
-  top: -45px;
-  left: 319px;
+  margin-top: -45px;
+  margin-bottom: 30px;
 }
 
 .reviews-slider__avatar {
@@ -966,12 +978,12 @@ template {
 }
 
 .reviews-slider__name {
+  margin-bottom: 10px;
   font-style: normal;
   font-weight: bold;
   font-size: 12px;
   line-height: 15px;
   color: #EC1F46;
-  margin-bottom: 10px;
 }
 
 .reviews-slider__date {
@@ -979,22 +991,52 @@ template {
   font-weight: normal;
   font-size: 10px;
   line-height: 13px;
-  color: #000000;
   margin-bottom: 4px;
 }
 
 .reviews-slider__stars {
-  line-height: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: space-between;
+      -ms-flex-align: space-between;
+          align-items: space-between;
 }
 
 .reviews-slider__text {
-  margin: 0;
+  max-width: 537px;
+  margin: auto;
   text-align: justify;
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
   line-height: 19px;
-  color: #333333;
+}
+
+.reviews-slider__button {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  background-repeat: no-repeat;
+  background-size: 10px;
+  background-position: center;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  z-index: 99;
+}
+
+.reviews-slider__button--prev {
+  background-image: url(../img/arrow-prev.svg);
+  left: 0;
+}
+
+.reviews-slider__button--next {
+  background-image: url(../img/arrow-next.svg);
+  right: 0;
 }
 
 @media (max-width: 1200px) {
@@ -1072,17 +1114,6 @@ template {
     font-size: 30px;
     line-height: 38px;
     max-width: 487px;
-  }
-  .reviews-slider {
-    overflow: visible;
-  }
-  .reviews-slider__item {
-    max-width: 579px;
-    height: 299px;
-    padding: 136px 62px 30px 62px;
-  }
-  .reviews-slider__profile {
-    left: 243px;
   }
 }
 
@@ -1163,14 +1194,6 @@ template {
   .reviews__title {
     font-size: 18px;
     line-height: 23px;
-  }
-  .reviews-slider__item {
-    padding: 136px 31px 34px 31px;
-    max-width: 95%;
-    height: 100%;
-  }
-  .reviews-slider__profile {
-    left: 40%;
   }
   .reviews-slider__text {
     text-align: left;
