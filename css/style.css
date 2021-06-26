@@ -822,10 +822,11 @@ template {
   overflow: hidden;
 }
 
-.newsletter {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(10, 34, 61, 0.8))), center/cover no-repeat url(../img/background.jpg);
-  background: linear-gradient(rgba(10, 34, 61, 0.8)), center/cover no-repeat url(../img/background.jpg);
+.newsletter__parallax-window {
+  height: 260px;
   padding: 98px 0 87px 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(10, 34, 61, 0.8)));
+  background: linear-gradient(rgba(10, 34, 61, 0.8));
 }
 
 .newsletter-wrapper {
@@ -1084,7 +1085,7 @@ template {
             flex-direction: column;
   }
   .hotel__slider {
-    max-width: 100%;
+    width: 100%;
     margin: 0;
     margin-bottom: 30px;
   }
@@ -1097,9 +1098,6 @@ template {
   .booking, .map {
     width: 340px;
     height: 210px;
-  }
-  .newsletter {
-    padding: 92px 0 93px 0;
   }
   .reviews {
     padding-bottom: 60px;
@@ -1161,8 +1159,8 @@ template {
   .booking, .map {
     width: 100%;
   }
-  .newsletter {
-    padding: 76px 0 83px 0;
+  .newsletter__parallax-window {
+    height: 100%;
   }
   .newsletter-wrapper {
     -webkit-box-orient: vertical;
@@ -1188,6 +1186,9 @@ template {
   }
   .newsletter-subscribe {
     width: 100%;
+  }
+  .reviews {
+    padding-bottom: 50px;
   }
   .reviews__title {
     font-size: 18px;
@@ -1225,7 +1226,7 @@ template {
   }
   .hotel {
     padding-top: 5px;
-    padding-bottom: 10px;
+    padding-bottom: 40px;
   }
   .hotel-info__name {
     margin-top: 10px;
