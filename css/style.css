@@ -1063,9 +1063,6 @@ template {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -1073,61 +1070,68 @@ template {
 
 .card {
   position: relative;
-  -ms-flex-preferred-size: 25%;
-      flex-basis: 25%;
-  max-width: 255px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 24px 26px;
+  width: 255px;
   height: 255px;
   border-radius: 6px;
+  overflow: hidden;
 }
 
-.card:after {
+.card:before {
   content: "";
-  display: block;
-  width: 100%;
-  height: 100%;
   position: absolute;
   top: 0;
+  bottom: 0;
   left: 0;
+  right: 0;
   background: linear-gradient(179.83deg, rgba(196, 196, 196, 0) 35.34%, #0A223D 99.85%) transparent;
-  opacity: 0.7;
-  border-radius: inherit;
+  z-index: -1;
 }
 
 .card__image {
-  height: 255px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: inherit;
+  z-index: -2;
 }
 
 .card__title {
-  margin: 0;
-  position: absolute;
-  top: 143px;
-  left: 26px;
+  margin-top: auto;
+  margin-bottom: 18px;
+  color: #ffffff;
   font-style: normal;
   font-weight: bold;
   font-size: 16px;
   line-height: 20px;
-  color: #ffffff;
-  z-index: 50;
 }
 
 .card__button {
-  position: absolute;
-  top: 201px;
-  left: 26px;
-  width: 100px;
-  height: 30px;
-  color: #ffffff;
-  background-color: #EC1F46;
-  border: none;
-  border-radius: 4px;
+  padding: 7px 22px;
   font-style: normal;
   font-weight: 600;
   font-size: 12px;
   line-height: 16px;
-  z-index: 50;
+  color: #ffffff;
+  background-color: #EC1F46;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
 @media (max-width: 1200px) {
@@ -1144,7 +1148,8 @@ template {
        object-fit: cover;
   }
   .card {
-    max-width: 235px;
+    width: 230px;
+    height: 230px;
   }
 }
 
@@ -1207,14 +1212,13 @@ template {
   .activities__wrapper {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    min-height: 530px;
-    -ms-flex-line-pack: justify;
-        align-content: space-between;
+  }
+  .activities__card {
+    margin-bottom: 20px;
   }
   .card {
-    max-width: 339px;
-    -ms-flex-preferred-size: 50%;
-        flex-basis: 50%;
+    width: 340px;
+    height: 250px;
   }
 }
 
@@ -1301,6 +1305,7 @@ template {
   }
   .reviews-slider__item {
     padding: 0 30px 30px;
+    width: 100%;
   }
   .reviews-slider__item:after, .reviews-slider__item:before {
     display: none;
@@ -1323,18 +1328,13 @@ template {
     -webkit-transform: translate(50%, 0);
             transform: translate(50%, 0);
   }
-  .activities__wrapper {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    max-height: 1088px;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+  .activities {
+    padding-top: 40px;
+    padding-bottom: 60px;
   }
   .card {
-    max-width: 67%;
+    width: 48%;
+    height: 255px;
   }
 }
 
@@ -1382,6 +1382,9 @@ template {
   .hotel__slider {
     margin-bottom: 20px;
     height: 250px;
+  }
+  .card {
+    width: 100%;
   }
 }
 /*# sourceMappingURL=style.css.map */

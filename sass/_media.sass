@@ -9,7 +9,8 @@
         width: 100%
         object-fit: cover
   .card
-    max-width: 235px
+    width: 230px
+    height: 230px
 @media (max-width: 992px)
   .container
     max-width: 700px
@@ -53,11 +54,11 @@
   .activities
     &__wrapper
       flex-wrap: wrap
-      min-height: 530px
-      align-content: space-between
+    &__card
+      margin-bottom: 20px
   .card
-    max-width: 339px
-    flex-basis: 50%
+    width: 340px
+    height: 250px
 @media (max-width: 768px)
   .container
     max-width: 576px
@@ -117,6 +118,7 @@
     &-slider
       &__item
         padding: 0 30px 30px
+        width: 100%
         &:after, &:before
           display: none
       &__text
@@ -132,12 +134,11 @@
           margin-right: -65px
           transform: translate(50%, 0)
   .activities
-    &__wrapper
-      flex-direction: column
-      max-height: 1088px
-      justify-content: space-between
+    padding-top: 40px
+    padding-bottom: 60px
   .card
-    max-width: 67%
+    width: 48%
+    height: 255px
 @media (max-width: 576px)
   .logo
     max-width: 99px
@@ -168,3 +169,5 @@
     &__slider
       margin-bottom: 20px
       height: 250px
+  .card
+    width: 100%
