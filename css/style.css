@@ -1073,8 +1073,10 @@ template {
 
 .card {
   position: relative;
+  -ms-flex-preferred-size: 25%;
+      flex-basis: 25%;
   max-width: 255px;
-  max-height: 255px;
+  height: 255px;
   border-radius: 6px;
 }
 
@@ -1092,8 +1094,9 @@ template {
 }
 
 .card__image {
-  width: 100%;
-  height: 100%;
+  height: 255px;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: inherit;
 }
 
@@ -1139,6 +1142,9 @@ template {
     width: 100%;
     -o-object-fit: cover;
        object-fit: cover;
+  }
+  .card {
+    max-width: 235px;
   }
 }
 
@@ -1196,7 +1202,19 @@ template {
     line-height: 38px;
   }
   .reviews-slider__item {
-    max-width: 580px;
+    width: 580px;
+  }
+  .activities__wrapper {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    min-height: 530px;
+    -ms-flex-line-pack: justify;
+        align-content: space-between;
+  }
+  .card {
+    max-width: 339px;
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
   }
 }
 
@@ -1304,6 +1322,19 @@ template {
     margin-right: -65px;
     -webkit-transform: translate(50%, 0);
             transform: translate(50%, 0);
+  }
+  .activities__wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    max-height: 1088px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .card {
+    max-width: 67%;
   }
 }
 
