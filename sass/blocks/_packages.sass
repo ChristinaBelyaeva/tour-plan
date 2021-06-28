@@ -1,0 +1,119 @@
+.packages
+  padding: 40px 0 70px
+  &__title
+    margin: 0
+    margin-bottom: 65px
+    font-style: normal
+    font-weight: bold
+    font-size: 36px
+    line-height: 45px
+    text-align: center
+    text-transform: uppercase
+  &__wrapper
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    grid-gap: 30px
+  &-card
+    max-height: 500px
+    overflow: hidden
+    display: grid
+    grid-template-rows: 50% 50%
+    border-radius: 8px
+    &--1
+      grid-column: 1 / 3
+      grid-template-columns: 1fr 1fr
+      grid-template-rows: 1fr
+    &__picture
+      position: relative
+      max-height: 500px
+    &__image
+      display: block
+      height: 100%
+      min-width: 100%
+      object-fit: cover
+    &__offer
+      position: absolute
+      top: 26px
+      left: 0
+      background-color: $primary-color
+      color: $light
+      border-radius: 0px 4px 4px 0px
+      padding: 4px 9px
+      font-style: normal
+      font-weight: 600
+      font-size: 8px
+      line-height: 10px
+      &--big
+        padding: 8px 12px
+        font-style: normal
+        font-weight: 600
+        font-size: 12px
+        line-height: 15px
+    &__information
+      background-color: $dark
+      color: $light
+      padding: 30px 21px 25px 32px
+      &--right
+        padding: 46px 21px 30px 43px
+    &__title
+      margin: 0
+      margin-bottom: 23px
+      &--rating
+        margin-bottom: 27px
+    &__name
+      font-style: normal
+      font-weight: bold
+      font-size: 18px
+      line-height: 23px
+    &__main
+      &-description
+        font-style: normal
+        font-weight: normal
+        font-size: 14px
+        line-height: 22px
+        margin: 0
+        margin-bottom: 34px
+    &__room
+      display: flex
+      flex-direction: column
+      min-height: 67px
+      justify-content: space-between
+      margin-bottom: 24px
+      &--big
+        margin-bottom: 37px
+    &__text
+      display: flex
+      align-items: center
+    &__description
+      margin-left: 14px
+      font-style: normal
+      font-weight: normal
+      font-size: 12px
+      line-height: 15px
+    &__prev
+      &-price
+        font-style: normal
+        font-weight: normal
+        font-size: 14px
+        line-height: 18px
+        text-decoration-line: line-through
+    &__booking
+      display: flex
+      align-items: center
+      justify-content: space-between
+    &__price
+      font-style: normal
+      font-weight: bold
+      font-size: 24px
+      line-height: 30px
+    &__button
+      width: 120px
+      height: 40px
+      background-color: $primary-color
+      color: $light
+      font-style: normal
+      font-weight: 600
+      font-size: 14px
+      line-height: 19px
+      border: none
+      border-radius: 4px
