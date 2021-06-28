@@ -11,6 +11,14 @@
   .card
     width: 230px
     height: 230px
+  .packages
+    &-card
+      &__information
+        &--right
+          padding-bottom: 21px
+      &__room
+        &--big
+          margin-bottom: 24px
 @media (max-width: 992px)
   .container
     max-width: 700px
@@ -59,6 +67,11 @@
   .card
     width: 340px
     height: 250px
+  .packages
+    &__wrapper
+      grid-template-columns: repeat(2, 1fr)
+      grid-gap: 15px
+      grid-template-rows: minmax(500px, max-content) minmax(500px, max-content) minmax(500px, max-content)
 @media (max-width: 768px)
   .container
     max-width: 576px
@@ -139,6 +152,15 @@
   .card
     width: 48%
     height: 255px
+  .packages
+    &__wrapper
+      grid-template-rows: minmax(500px, max-content) minmax(500px, max-content)
+      grid-gap: 10px
+    &-card
+      &__information
+        &--right
+          padding-top: 8px
+          padding-bottom: 8px
 @media (max-width: 576px)
   .logo
     max-width: 99px
