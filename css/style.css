@@ -916,17 +916,14 @@ template {
 .packages-card__title {
   margin: 0;
   margin-bottom: 23px;
-}
-
-.packages-card__title--rating {
-  margin-bottom: 27px;
-}
-
-.packages-card__name {
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
   line-height: 23px;
+}
+
+.packages-card__title--rating {
+  margin-bottom: 27px;
 }
 
 .packages-card__main-description {
