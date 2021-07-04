@@ -1,0 +1,135 @@
+.footer
+  padding: 108px 0 46px
+  background-color: $dark
+  &-wrapper
+    display: grid
+    grid-template: minmax(40px, max-content) minmax(40px, max-content) 89px minmax(40px, max-content) / repeat(4, 1fr)
+  &__logo
+    grid-row: 1 / 3
+    align-self: center
+    min-height: 192px
+    border: 2px solid yellow
+  &__categories
+    grid-row: 1 / 3
+    border: 2px solid green
+  &__additional
+    grid-column: 3 / 4
+    border: 2px solid orange
+  &__social
+    grid-row: 2 / 3
+    grid-column: 3 / 5
+    display: flex
+    padding-top: 15px
+    border: 2px solid red
+  &__networks
+    display: flex
+    justify-content: space-between
+    margin-left: 41px
+    min-width: 85px
+    // max-height: 24px
+  &__legal
+    padding-left: 80px
+    border: 2px solid pink
+  &__title
+    margin: 0
+    font-style: normal
+    font-weight: bold
+    font-size: 18px
+    line-height: 23px
+    text-transform: uppercase
+    color: $light
+  &__list
+    list-style: none
+    padding: 0
+    margin: 0
+    margin-top: 20px
+  &__item
+    font-style: normal
+    font-weight: normal
+    font-size: 14px
+    line-height: 22px
+  &__link
+    color: $footer-text
+  &__text
+    margin-top: 27px
+    margin-bottom: 22px
+    font-style: normal
+    font-weight: normal
+    font-size: 14px
+    line-height: 22px
+    color: $footer-text
+  &__contacts
+    grid-row: 4 / 5
+    grid-column: 1 / 3
+    // align-self: center
+    padding-top: 12px
+    border: 2px solid lime
+  &__appeal
+    grid-row: 4 / 5
+    grid-column: 3 / 5
+    border: 2px solid aqua
+  &__form
+    display: grid
+    grid-template: 50px 15px 123px 22px 50px / repeat(2, 1fr)
+    grid-column-gap: 30px
+    margin-top: 34px
+  &__name
+    grid-column: 1 / 2
+    padding: 18px 0 17px 23px
+    border-radius: 4px
+  &__phone
+    grid-column: 2 / 3
+    padding: 18px 0 17px 23px
+    border-radius: 4px
+  &__message
+    grid-row: 3 / 4
+    grid-column: 1 / 3
+    padding: 18px 0 0 23px
+    border-radius: 4px
+  &__button
+    grid-row: 5 / 6
+    width: 160px
+    padding: 18px 65px
+    font-style: normal
+    font-weight: bold
+    font-size: 12px
+    line-height: 15px
+    color: $light
+    background-color: $primary-color
+    border: none
+    border-radius: 4px
+  &__footnote
+    grid-row: 5 / 6
+    grid-column: 2 / 3
+    align-self: center
+    justify-self: end
+    font-style: normal
+    font-weight: bold
+    font-size: 12px
+    line-height: 15px
+    color: $footer-text
+.contacts
+  &__list
+    margin: 0
+    padding: 0
+  &__item
+    list-style: none
+    &--address
+      background: url(../img/location-icon.svg) no-repeat left center
+      padding-left: 41px
+      margin-bottom: 22px
+    &--tel
+      background: url(../img/footer-phone-icon.svg) no-repeat left top
+      padding-left: 41px
+      margin-bottom: 26px
+    &--mail
+      background: url(../img/mail-icon.svg) no-repeat left center
+      padding-left: 41px
+  &__link
+    font-style: normal
+    font-weight: normal
+    font-size: 14px
+    line-height: 22px
+    color: $footer-text
+  &__details
+    padding: 0
