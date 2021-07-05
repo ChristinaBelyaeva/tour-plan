@@ -68,6 +68,12 @@
     width: 340px
     height: 250px
   .packages
+    padding: 20px 0 50px
+    &__title
+      font-style: normal
+      font-weight: bold
+      font-size: 30px
+      line-height: 38px
     &__wrapper
       grid-template-columns: repeat(2, 1fr)
       grid-gap: 15px
@@ -185,14 +191,22 @@
     width: 48%
     height: 255px
   .packages
+    &__title
+      font-size: 18px
+      line-height: 23px
     &__wrapper
-      grid-template-rows: minmax(500px, max-content) minmax(500px, max-content)
+      grid-template: repeat(5, 1fr) / 1fr
       grid-gap: 10px
     &-card
+      grid-column: 1 / 2
       &__information
         &--right
           padding-top: 8px
           padding-bottom: 8px
+      &--1
+        grid-template: 50% 50% / 1fr
+      &__main-description
+        display: none
   .footer
     padding-top: 69px
     padding-bottom: 21px
