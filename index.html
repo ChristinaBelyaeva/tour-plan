@@ -17,6 +17,8 @@
   <script defer
     src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script defer
+    src="js/jquery.validate.min.js"></script>
+  <script defer
     src="js/main.js"></script>
   <link rel="preconnect"
     href="https://fonts.gstatic.com">
@@ -865,15 +867,23 @@
           <h3 class="footer__title">Send us a message</h3>
           <form action="send.php"
             method="POST"
-            class="footer__form">
-            <input type="text"
-              class="footer__name"
-              placeholder="Your Full Name*"
-              name="name">
-            <input type="tel"
-              class="footer__phone"
-              placeholder="Phone Number*"
-              name="phone">
+            class="footer__form form">
+            <div class="footer__input">
+              <input type="text"
+                class="footer__name"
+                placeholder="Your Full Name*"
+                name="name"
+                required>
+            </div>
+            <!-- /.footer__input -->
+            <div class="footer__input">
+              <input type="tel"
+                class="footer__phone"
+                placeholder="Phone Number*"
+                name="phone"
+                required>
+            </div>
+            <!-- /.footer__input -->
             <textarea class="footer__message"
               placeholder="Message"
               name="message"></textarea>
@@ -917,19 +927,23 @@
       <h3 class="modal__title">Booking</h3>
       <form action="send.php"
         method="POST"
-        class="modal__form">
+        class="modal__form form">
         <input type="text"
           class="modal__name"
           placeholder="Your Full Name*"
-          name="name">
+          name="name"
+          minlength="2"
+          required>
         <input type="tel"
           class="modal__phone"
           placeholder="Phone Number*"
-          name="phone">
+          name="phone"
+          required>
         <input type="email"
           class="modal__email"
           placeholder="Email*"
-          name="email">
+          name="email"
+          required>
         <textarea class="modal__message"
           placeholder="Message"
           name="message"></textarea>
