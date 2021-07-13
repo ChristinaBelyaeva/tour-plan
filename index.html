@@ -18,8 +18,11 @@
     src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script defer
     src="js/jquery.validate.min.js"></script>
+    <script defer src="js/aos.js"></script>
   <script defer
     src="js/main.js"></script>
+
+
   <link rel="preconnect"
     href="https://fonts.gstatic.com">
   <link
@@ -27,6 +30,8 @@
     rel="stylesheet">
   <link rel="stylesheet"
     href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link href="css/aos.css"
+    rel="stylesheet">
   <link rel="stylesheet"
     href="css/style.css">
 </head>
@@ -39,7 +44,10 @@
           class="logo">
           <img src="img/horizontal-logo.svg"
             alt="Logo: Best Tour Plan"
-            class="logo__image">
+            class="logo__image"
+            data-aos="flip-right"
+            data-aos-duration="1000"
+            data-aos-delay="500">
         </a>
 
         <form action="#"
@@ -675,7 +683,7 @@
     <div class="container">
       <h2 class="activities__title">other activities</h2>
       <div class="activities__wrapper">
-        <div class="card activities__card">
+        <div class="card activities__card" data-aos="fade-right" data-aos-duration="800" data-aos-delay="300">
           <img src="img/activity-1.jpg"
             alt="photo: The curious corner of chamarel"
             class="card__image">
@@ -683,7 +691,7 @@
           <button class="card__button">Book Now</button>
         </div>
         <!-- /.card -->
-        <div class="card activities__card">
+        <div class="card activities__card" data-aos="fade-right" data-aos-duration="800" data-aos-delay="500">
           <img src="img/activity-2.jpg"
             alt="photo: Gymkhana club golf course"
             class="card__image">
@@ -691,7 +699,7 @@
           <button class="card__button">Book Now</button>
         </div>
         <!-- /.card -->
-        <div class="card activities__card">
+        <div class="card activities__card" data-aos="fade-right" data-aos-duration="800" data-aos-delay="700">
           <img src="img/activity-3.jpg"
             alt="photo: Tamarind falls hiking trip - full day"
             class="card__image">
@@ -699,7 +707,7 @@
           <button class="card__button">Book Now</button>
         </div>
         <!-- /.card -->
-        <div class="card activities__card">
+        <div class="card activities__card" data-aos="fade-right" data-aos-duration="800" data-aos-delay="900">
           <img src="img/activity-4.jpg"
             alt="photo: The blue marine discovery quest"
             class="card__image">
@@ -718,7 +726,9 @@
       <div class="footer-wrapper">
         <img src="img/vertical-logo.svg"
           alt="logo: best tour plan"
-          class="footer__logo">
+          class="footer__logo"
+          data-aos="flip-right"
+          data-aos-duration="1000">
         <div class="footer__categories">
           <h3 class="footer__title">all categories</h3>
           <ul class="footer__list">
