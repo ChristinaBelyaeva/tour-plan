@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  var hotelSlider = new Swiper('.hotel-slider', {
+  let hotelSlider = new Swiper('.hotel-slider', {
     // Optional parameters
     loop: true,
 
@@ -17,7 +17,7 @@ $(document).ready(function () {
     },
   });
 
-  var reviewsSlider = new Swiper('.reviews-slider', {
+  let reviewsSlider = new Swiper('.reviews-slider', {
     // Optional parameters
     loop: true,
 

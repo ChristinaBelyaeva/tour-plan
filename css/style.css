@@ -586,13 +586,14 @@ template {
   max-width: 730px;
   height: 450px;
   margin-left: 0;
+  overflow: hidden;
+  position: relative;
 }
 
 .hotel-slider__item {
   width: 100%;
   height: 100%;
   margin: 0;
-  position: relative;
   border-radius: 8px;
   overflow: hidden;
 }
@@ -1118,6 +1119,11 @@ template {
   margin-bottom: 70px;
 }
 
+.reviews-slider {
+  overflow: hidden;
+  position: relative;
+}
+
 .reviews-slider__item {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1130,7 +1136,6 @@ template {
       -ms-flex-align: center;
           align-items: center;
   max-width: 731px;
-  position: relative;
   margin: 45px auto 0;
   padding: 0 62px 30px;
   background-color: #fff;
