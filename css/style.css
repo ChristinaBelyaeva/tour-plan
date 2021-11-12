@@ -9,6 +9,14 @@ body {
   background-color: #F5FAFE;
 }
 
+.body {
+  overflow: visible;
+}
+
+.body--hidden {
+  overflow: hidden;
+}
+
 .container {
   max-width: 1110px;
   margin: auto;
@@ -621,7 +629,7 @@ template {
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-  z-index: 99;
+  z-index: 5;
   height: 30px;
   width: 30px;
   border: none;
@@ -1235,7 +1243,7 @@ template {
   border: none;
   background-color: transparent;
   cursor: pointer;
-  z-index: 99;
+  z-index: 5;
 }
 
 .reviews-slider__button--prev {
